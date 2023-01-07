@@ -368,7 +368,7 @@ h2 {
   background: #D9D9D9;
 }
 .accordion__item__button .arrow span {
-  background-image: url(/plants/img/svg/arrow.svg);
+  background-image: url(../img/svg/arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 5px;
@@ -384,7 +384,7 @@ h2 {
   background: #AEA1A1;
 }
 .accordion__item__button-active .arrow span {
-  background-image: url(/plants/img/svg/arrowactive.svg);
+  background-image: url(../img/svg/arrowactive.svg);
 }
 
 .accordion__item__content {
