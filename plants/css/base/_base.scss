@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  @extend %font-first;
+}
+
+h1 {
+  @extend %font-second;
+  @include font(4.5rem, 5.0rem, 700);
+  color: $color-text-2;
+
+  span {
+    color: $color-main;
+  }
+}
+
+h2 {
+  @include font(4.0rem, 5.2rem);
+  color: $color-main;
+}

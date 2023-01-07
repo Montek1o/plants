@@ -1,0 +1,66 @@
+.service {
+  background-color: $color-background;
+  padding: 40px 0 121px 0;
+}
+
+.service__header {
+  max-width: 1007px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 90px;
+
+  h2 {
+    max-width: 306px;
+  }
+}
+
+.service__buttons {
+  display: flex;
+
+  .service_button {
+    margin-left: 38px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.service__main {
+  min-height: 955px;
+}
+
+.service__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  width: 329px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E3E1D5;
+  border-radius: 0px 0px 20px 20px;
+  @extend %font-second;
+}
+
+.card__title {
+  color: $color-additional;
+  @include font(2rem, 2rem, 700);
+  margin: 10px 0;
+}
+
+.card__text {
+  color: $color-text-2;
+  @include font(1.6rem, 2rem);
+  margin-bottom: 36px;
+}

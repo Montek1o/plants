@@ -1,0 +1,144 @@
+.prices {
+  padding: 40px 0 115px 0;
+
+  h2 {
+    @extend %font-second;
+    color: #000;
+    @include font(4rem, 4.8rem, 700);
+    margin-bottom: 60px;
+  }
+}
+
+.prices__accordion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 332px;
+  height: 282.01px;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+}
+
+.accordion__item {
+  margin: 16px 0;
+}
+
+.accordion__item__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  @extend %font-second;
+  @include font(2rem, 2rem, 700);
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: $color-background;
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #D9D9D9;
+
+    span {
+      background-image: url(/plants/img/svg/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  &-active {
+    border-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #D6E7D2;
+
+    .arrow {
+      background: #AEA1A1;
+
+      span {
+        background-image: url(/plants/img/svg/arrowactive.svg);
+      }
+    }
+  }
+}
+
+.accordion__item__content {
+  max-height: 0;
+  width: 250px;
+  padding: 0 40px;
+  overflow: hidden;
+  @extend %transition;
+  @extend %font-second;
+  background-color: #D6E7D2;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &__text {
+    @include font(1rem, 1rem, 300);
+    color: $color-text-2;
+    padding-top: 6px;
+    border-top: 0.5px solid #AEA1A1;
+  }
+
+  &__price {
+    @include font(1.2rem, 2rem, 400);
+    margin: 6px 0 8px 0;
+
+    span {
+      @include font(1.6rem, 2rem, 700);
+      color: $color-additional;
+    }
+  }
+
+  &__button {
+    width: 86px;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 12px;
+    @include font(1.4rem, 2rem, 700);
+    color: $color-text-2;
+
+    &:hover {
+      background-color: $color-additional;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $color-main;
+    }
+  }
+}
+
+.prices__help {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.prices__help__title {
+  @extend %font-second;
+  @include font(4rem, 5rem, 700);
+  text-align: right;
+
+  span {
+    color: $color-main;
+  }
+}
+
+.prices__help__button {
+  background-color: #fff;
+  font-weight: 700;
+  margin: 39px 0 38px 0;
+}

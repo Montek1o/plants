@@ -1,0 +1,134 @@
+.contact-us {
+  background-color: $color-background;
+}
+
+.contact-us__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 53px;
+
+  h2 {
+    font-weight: 700;
+    padding-top: 7px;
+    padding-left: 50px;
+  }
+}
+
+.contact-us__drop-down {
+  width: 450px;
+  height: 50px;
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 35px 0 20px;
+  margin-top: 95px;
+  cursor: pointer;
+
+  &_active {
+    background: #C1E698;
+    border: 1px solid #D6E7D2;
+    box-shadow: none;
+
+    .drop-down__arrow {
+      background: #8BA07E;
+
+      img {
+        transform: none;
+      }
+    }
+  }
+}
+
+.drop-down__title {
+  @extend %font-second;
+  @include font(2rem, 4rem);
+  color: $color-text-2;
+}
+
+.drop-down__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #AEA1A1;
+
+  img {
+    width: 8px;
+    transform: rotate(180deg);
+  }
+}
+
+.contact-us__drop-down__content {
+  width: 450px;
+  height: 234px;
+  background: #DCE9D9;
+  padding: 0px 35px 31px;
+  display: none;
+}
+
+.drop-down__content__item {
+  color: $color-main;
+  @extend %font-second;
+  @include font (1.6rem, 4rem);
+  border-bottom: 1px solid #D9D9D9;
+  padding-top: 12px;
+  padding-left: 6px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-text-2;
+    border-bottom: 1px solid $color-text-2;
+  }
+}
+
+.drop-down__adresses {
+  width: 448px;
+  height: 214px;
+  background: $color-background;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  margin-top: 47px;
+  padding: 17px 76px 32px 35px;
+  display: flex;
+  display: none;
+  flex-wrap: wrap;
+}
+
+.adresses__title {
+  @extend %font-second;
+  @include font(1.6rem, 4rem);
+}
+
+.adresses__content {
+  color: $color-text-2;
+  @extend %font-second;
+  @include font(1.6rem, 4rem);
+  padding-left: 10px;
+}
+
+.adresses__button {
+  width: 122px;
+  height: 26px;
+  border: 1px solid $color-additional;
+  border-radius: 5px;
+  @extend %font-first;
+  @include font(1rem, 1.3rem, 700);
+  color: $color-text-2;
+  background: $color-background;
+  cursor: pointer;
+  margin-left: 120px;
+
+  &:hover {
+    background-color: $color-additional;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: $color-main;
+    border-color: $color-main;
+  }
+}

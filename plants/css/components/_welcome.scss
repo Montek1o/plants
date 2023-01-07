@@ -1,0 +1,52 @@
+.welcome {
+  background: $color-background;
+  padding: 62px 0 62.64px 0;
+}
+
+.welcome__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome__img {
+  width: 448.8px;
+  height: 407.36px;
+}
+
+.welcome__content {
+  padding-left: 224.2px;
+}
+
+.welcome__text {
+  color: $color-text;
+  @extend %font-second;
+  @include font(2rem, 3.5rem);
+  max-width: 525.44px;
+  margin: 42px 0 48px 0;
+}
+
+.welcome__button {
+  width: 158px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $color-additional;
+  border-radius: 10px;
+  background: $color-background;
+  @include font(1.6rem, 2.0rem, 400);
+  @extend %font-second;
+  @extend %transition;
+  cursor: pointer;
+
+  &:hover {
+    color: #fff;
+    background-color: $color-additional;
+  }
+
+  &:active {
+    background-color: $color-main;
+    border-color: $color-main;
+  }
+}

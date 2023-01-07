@@ -1,0 +1,19 @@
+.logo {
+  text-decoration: none;
+  color: #000;
+  @include font(1.6rem, 2.1rem);
+  @extend %transition;
+
+  &:hover {
+    color: $color-additional;
+  }
+
+  &:active {
+    color: $color-main;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
