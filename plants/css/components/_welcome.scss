@@ -5,8 +5,6 @@
 
 .welcome__wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .welcome__img {
@@ -15,7 +13,8 @@
 }
 
 .welcome__content {
-  padding-left: 224.2px;
+  padding-top: 36px;
+  padding-left: 229px;
 }
 
 .welcome__text {
@@ -23,7 +22,7 @@
   @extend %font-second;
   @include font(2rem, 3.5rem);
   max-width: 525.44px;
-  margin: 42px 0 48px 0;
+  margin: 44px 0 46px 0;
 }
 
 .welcome__button {

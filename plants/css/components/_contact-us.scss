@@ -1,16 +1,16 @@
 .contact-us {
   background-color: $color-background;
+  padding-top: 53px;
 }
 
 .contact-us__wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 53px;
 
   h2 {
     font-weight: 700;
     padding-top: 7px;
-    padding-left: 50px;
+    padding-left: 46px;
   }
 }
 
@@ -45,6 +45,7 @@
   @extend %font-second;
   @include font(2rem, 4rem);
   color: $color-text-2;
+  letter-spacing: 0.05em;
 }
 
 .drop-down__arrow {

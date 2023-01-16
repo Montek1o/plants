@@ -125,6 +125,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+
+  img {
+    width: 152px;
+    height: 174.99px;
+  }
 }
 
 .prices__help__title {
@@ -140,5 +145,5 @@
 .prices__help__button {
   background-color: #fff;
   font-weight: 700;
-  margin: 39px 0 38px 0;
+  margin: 38px 0 39px 0;
 }

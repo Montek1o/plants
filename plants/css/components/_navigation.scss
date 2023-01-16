@@ -1,11 +1,12 @@
 .navigation {
   display: flex;
+  justify-content: space-between;
   @include font(1.6rem, 5.0rem);
+  width: 452px;
 }
 
 .navigation__link {
   list-style: none;
-  padding: 0 23px;
 
   a {
     @extend %transition;
@@ -19,13 +20,5 @@
     &:active {
       color: $color-main;
     }
-  }
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
   }
 }

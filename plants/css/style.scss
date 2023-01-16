@@ -7,12 +7,12 @@
 @import "base/base";
 @import "base/buttons";
 @import "base/logo";
-@import "base/icons";
 
 // Layouts
 @import "layouts/wrapper";
 @import "layouts/header";
 @import "layouts/columns";
+@import "layouts/footer";
 
 // Components 
 @import "components/navigation";
@@ -21,4 +21,3 @@
 @import "components/service";
 @import "components/prices";
 @import "components/contact-us";
-@import "components/footer";
