@@ -1,5 +1,5 @@
 footer {
-  margin: 40px 0;
+  padding: 40px 0;
   @extend %font-second;
   @include font(2rem, 5rem);
 
@@ -16,21 +16,46 @@ footer {
       color: $color-main;
     }
   }
+
+  @include media-tablet {
+    padding: 32.51px 0 27px;
+    @include font(2rem, 2.4rem);
+  }
+
+  @include media-mobile {
+    padding: 22px 0 18.68px;
+  }
 }
 
 .footer__wrapper {
-  height: 50px;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  p {
-    margin-right: 20px;
+  @include media-tablet {
+    flex-direction: column;
   }
 }
 
 .footer__year {
   display: flex;
+
+  p {
+    padding-left: 20px;
+
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+}
+
+.footer__center {
+  padding-left: 18px;
+
+  @include media-tablet {
+    padding: 16px 0;
+  }
 }
 
 .footer__social {
@@ -47,6 +72,18 @@ footer {
   img {
     width: 32px;
     height: 32px;
+  }
 
+  @include media-tablet {
+    padding-top: 10px;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @include media-mobile {
+    padding-top: 0px;
   }
 }

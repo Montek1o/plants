@@ -19,4 +19,10 @@
     background-color: $color-main;
     border-color: $color-main;
   }
+
+  @include media-mobile {
+    width: 121px;
+    height: 35px;
+    @include font(1.5rem, 2rem);
+  }
 }
