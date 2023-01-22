@@ -1,11 +1,33 @@
 .prices {
-  padding: 40px 0 115px 0;
+  padding: 40px 0 115px;
 
-  h2 {
-    @extend %font-second;
-    color: #000;
-    @include font(4rem, 4.8rem, 700);
-    margin-bottom: 60px;
+  @include media-tablet {
+    padding-bottom: 87px;
+  }
+
+  @include media-mobile {
+    padding: 25px 0 40px;
+  }
+}
+
+.prices__title {
+  @extend %font-second;
+  color: #000;
+  @include font(4rem, 4.8rem, 700);
+  margin-bottom: 60px;
+
+  @include media-tablet {
+    @include font(3.5rem, 4.2rem, 700);
+    margin-bottom: 50px;
+    height: 49px;
+    width: 135px;
+    text-align: center;
+  }
+
+  @include media-mobile {
+    @include font(2.5rem, 3rem, 700);
+    margin: 0 auto 40px;
+    height: 27px;
   }
 }
 
@@ -14,14 +36,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 332px;
+  width: 332px;
   height: 282.01px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
+
+  @include media-mobile {
+    width: 224px;
+    height: 235px;
+
+    margin: 0 auto;
+  }
 }
 
 .accordion__item {
   margin: 16px 0;
+
+  @include media-mobile {
+    width: 180px;
+    margin-top: 13.92px;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
 .accordion__item__button {
@@ -68,6 +107,13 @@
         background-image: url(../img/svg/arrowactive.svg);
       }
     }
+  }
+
+  @include media-mobile {
+    width: 180px;
+    height: 49.72px;
+    @include font(1.5rem, 2rem, 700);
+    padding: 0 40px 0 30px;
   }
 }
 
@@ -126,9 +172,13 @@
   flex-direction: column;
   align-items: flex-end;
 
-  img {
-    width: 152px;
-    height: 174.99px;
+  @include media-tablet {
+    padding-top: 99px;
+  }
+
+  @include media-mobile {
+    padding-top: 19px;
+    align-items: center;
   }
 }
 
@@ -140,10 +190,39 @@
   span {
     color: $color-main;
   }
+
+  @include media-tablet {
+    @include font(2.5rem, 3.5rem, 700);
+    width: 296px;
+  }
+
+  @include media-mobile {
+    @include font(2rem, 3.5rem, 700);
+    text-align: center;
+    width: 230px;
+    height: 77px;
+  }
 }
 
 .prices__help__button {
   background-color: #fff;
   font-weight: 700;
-  margin: 38px 0 39px 0;
+  margin: 38px 0 39px;
+
+  @include media-tablet {
+    margin: 30px 0 34px;
+  }
+
+  @include media-mobile {
+    margin: 14px 0 0;
+  }
+}
+
+.prices__help__img {
+  width: 152px;
+  height: 174.99px;
+
+  @include media-mobile {
+    display: none;
+  }
 }

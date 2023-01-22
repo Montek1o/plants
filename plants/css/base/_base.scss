@@ -22,9 +22,25 @@ h1 {
   span {
     color: $color-main;
   }
+
+  @include media-tablet {
+    @include font(3.5rem, 5.0rem, 700);
+  }
+
+  @include media-mobile {
+    @include font(2.5rem, 3.5rem, 700);
+  }
 }
 
 h2 {
   @include font(4.0rem, 5.2rem);
   color: $color-main;
+
+  @include media-tablet {
+    @include font(3.5rem, 4.6rem);
+  }
+
+  @include media-mobile {
+    @include font(2.5rem, 3.3rem);
+  }
 }

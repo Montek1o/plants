@@ -1,16 +1,58 @@
 .contact-us {
   background-color: $color-background;
   padding-top: 53px;
+
+  @include media-tablet {
+    padding-top: 40px;
+  }
+
+  @include media-mobile {
+    padding-top: 25px;
+  }
 }
 
 .contact-us__wrapper {
   display: flex;
   justify-content: space-between;
 
-  h2 {
-    font-weight: 700;
-    padding-top: 7px;
-    padding-left: 46px;
+  @include media-laptop {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contact-us__title {
+  font-weight: 700;
+  padding-top: 7px;
+  padding-left: 46px;
+
+  @include media-tablet {
+    padding: 0;
+    @include font(4rem, 5.2rem, 700);
+  }
+
+  @include media-mobile {
+    @include font(2.5rem, 3.3rem, 700);
+  }
+}
+
+.contact-us__img {
+  @include media-laptop {
+    order: 2;
+    width: 400px;
+    height: 496.99px;
+  }
+
+  @include media-tablet {
+    margin-top: 250px;
+    width: 200px;
+    height: 248.49px;
+  }
+
+  @include media-mobile {
+    margin-top: 132px;
+    width: 100px;
+    height: 124.25px;
   }
 }
 
@@ -38,6 +80,21 @@
         transform: none;
       }
     }
+  }
+
+  @include media-tablet {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 530px) {
+    width: 300px;
+    height: 50px;
+
+  }
+
+  @include media-mobile {
+    margin-top: 80px;
+    padding: 0 20px;
   }
 }
 

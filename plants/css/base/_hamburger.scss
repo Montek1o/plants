@@ -1,0 +1,50 @@
+%hamburger-line {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: $color-text-2;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 26px;
+
+  &::before {
+    @extend %hamburger-line;
+  }
+
+  &::after {
+    @extend %hamburger-line;
+  }
+
+  @media (max-width: 570px) {
+    display: inline-flex;
+    z-index: 1;
+  }
+
+  &_active {
+    .hamburger__line {
+      transform: scale(0);
+    }
+
+    &::before {
+      @extend %hamburger-line;
+      background-color: #fff;
+      transform: translateY(12px) rotate(45deg);
+    }
+
+    &::after {
+      @extend %hamburger-line;
+      background-color: #fff;
+      transform: translateY(-12px) rotate(-45deg);
+    }
+  }
+}
+
+.hamburger__line {
+  @extend %hamburger-line;
+}
