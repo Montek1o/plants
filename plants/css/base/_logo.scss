@@ -5,8 +5,10 @@
   @extend %transition;
   text-decoration: none;
 
-  &:hover {
-    color: $color-additional;
+  @media (min-width: 769px) {
+    &:hover {
+      color: $color-additional;
+    }
   }
 
   &:active {

@@ -131,13 +131,13 @@ buttonSelect.addEventListener('click', () => {
     })
     titleSelect.textContent = 'City';
     titleSelect.style.fontSize = '2rem';
-    if (document.documentElement.clientWidth <= 380) {
+    if (document.documentElement.clientWidth <= 414) {
       woman.style.display = 'block';
     }
   } else {
     buttonSelect.classList.add('contact-us__drop-down_active');
     contentSelect.style.display = 'block';
-    if (document.documentElement.clientWidth <= 380) {
+    if (document.documentElement.clientWidth <= 414) {
       woman.style.display = 'none';
     }
   }
