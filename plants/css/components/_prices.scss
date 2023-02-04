@@ -1,12 +1,8 @@
 .prices {
-  padding: 40px 0 115px;
-
-  @include media-tablet {
-    padding-bottom: 87px;
-  }
+  padding: 40px 0 0px;
 
   @include media-mobile {
-    padding: 25px 0 40px;
+    padding: 25px 0 0px;
   }
 }
 
@@ -37,15 +33,15 @@
   justify-content: center;
   align-items: center;
   width: 332px;
-  height: 282.01px;
+  min-height: 282.01px;
   border: 1px solid #E3E1D5;
   border-radius: 20px;
 
   @include media-mobile {
     width: 224px;
-    height: 235px;
-
+    min-height: 235px;
     margin: 0 auto;
+    padding: 10px;
   }
 }
 
@@ -120,7 +116,7 @@
 .accordion__item__content {
   max-height: 0;
   width: 250px;
-  padding: 0 40px;
+  padding: 0 20px;
   overflow: hidden;
   @extend %transition;
   @extend %font-second;
@@ -156,14 +152,30 @@
     @include font(1.4rem, 2rem, 700);
     color: $color-text-2;
 
-    &:hover {
-      background-color: $color-additional;
-      color: #fff;
+    a {
+      text-decoration: none;
+      color: $color-text-2;
+    }
+
+    @media (min-width: 768px) {
+      &:hover {
+        background-color: $color-additional;
+
+        a {
+          color: #fff;
+        }
+      }
     }
 
     &:active {
       background-color: $color-main;
     }
+  }
+
+  @include media-mobile {
+    width: 180px;
+
+
   }
 }
 
@@ -171,13 +183,16 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-bottom: 115px;
 
   @include media-tablet {
     padding-top: 99px;
+    padding-bottom: 87px;
   }
 
   @include media-mobile {
     padding-top: 19px;
+    padding-bottom: 40px;
     align-items: center;
   }
 }
@@ -186,6 +201,7 @@
   @extend %font-second;
   @include font(4rem, 5rem, 700);
   text-align: right;
+  transition: all 0.3s;
 
   span {
     color: $color-main;

@@ -44,13 +44,13 @@
   }
 
   @include media-tablet {
-    margin-top: 250px;
+    margin-top: 15px; //250
     width: 200px;
     height: 248.49px;
   }
 
   @include media-mobile {
-    margin-top: 132px;
+    margin-top: 0px;
     width: 100px;
     height: 124.25px;
   }
@@ -66,12 +66,14 @@
   align-items: center;
   padding: 0 35px 0 20px;
   margin-top: 95px;
+  margin-bottom: 235px;
   cursor: pointer;
 
   &_active {
     background: #C1E698;
     border: 1px solid #D6E7D2;
     box-shadow: none;
+    margin-bottom: 0px;
 
     .drop-down__arrow {
       background: #8BA07E;
@@ -84,17 +86,26 @@
 
   @include media-tablet {
     margin-top: 100px;
+
+    &_active {
+      margin-top: 60px;
+    }
   }
 
   @media (max-width: 530px) {
     width: 300px;
     height: 50px;
-
   }
 
   @include media-mobile {
     margin-top: 80px;
+    margin-bottom: 132px;
     padding: 0 20px;
+
+    &_active {
+      margin-top: 42px;
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -126,6 +137,18 @@
   background: #DCE9D9;
   padding: 0px 35px 31px;
   display: none;
+
+  @include media-tablet {
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: 530px) {
+    width: 300px;
+  }
+
+  @include media-mobile {
+    margin-bottom: 61px;
+  }
 }
 
 .drop-down__content__item {
@@ -151,21 +174,56 @@
   border-radius: 20px;
   margin-top: 47px;
   padding: 17px 76px 32px 35px;
-  display: flex;
   display: none;
   flex-wrap: wrap;
+
+  @include media-tablet {
+    margin-top: 61px;
+  }
+
+  @media (max-width: 530px) {
+    width: 282px;
+    height: 212px;
+    padding: 23px 36px;
+    margin: 49px auto 14px;
+  }
+
+  @include media-mobile {
+    margin: 49px auto 34px;
+  }
+}
+
+.adresses_active {
+  display: flex;
 }
 
 .adresses__title {
   @extend %font-second;
   @include font(1.6rem, 4rem);
+
+  @media (max-width: 530px) {
+    width: 64.69px;
+
+    .office {
+      @include font(1.6rem, 2rem);
+    }
+  }
 }
 
 .adresses__content {
   color: $color-text-2;
   @extend %font-second;
   @include font(1.6rem, 4rem);
-  padding-left: 10px;
+  padding-left: 26px; //10
+
+  @media (max-width: 530px) {
+    padding-left: 0px;
+    width: 140px;
+
+    .office_adress {
+      @include font(1.6rem, 2rem);
+    }
+  }
 }
 
 .adresses__button {
@@ -178,15 +236,23 @@
   color: $color-text-2;
   background: $color-background;
   cursor: pointer;
-  margin-left: 120px;
+  margin-left: 127px;
+  margin-top: 18px;
 
-  &:hover {
-    background-color: $color-additional;
-    color: #fff;
+  @media (min-width: 768px) {
+    &:hover {
+      background-color: $color-additional;
+      color: #fff;
+    }
   }
 
   &:active {
     background-color: $color-main;
     border-color: $color-main;
+  }
+
+  @media (max-width: 530px) {
+    margin-left: 50px;
+    margin-top: 17px;
   }
 }

@@ -44,7 +44,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  .service_button {
+  .service__button {
     margin-left: 38px;
 
     &:first-child {
@@ -89,6 +89,23 @@
   @include media-mobile {
     margin-top: 32px;
   }
+
+  &_garden {
+    filter: blur(0px);
+  }
+
+  &_lawn {
+    filter: blur(0px);
+  }
+
+  &_planting {
+    filter: blur(0px);
+  }
+}
+
+.blur {
+  filter: blur(5px);
+  transition: all 0.5s ease;
 }
 
 .card__img {
