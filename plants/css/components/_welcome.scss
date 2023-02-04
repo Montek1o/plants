@@ -83,14 +83,17 @@
   @extend %transition;
   cursor: pointer;
 
-  &:hover {
-    color: #fff;
-    background-color: $color-additional;
+  @media (min-width: 769px) {
+    &:hover {
+      background-color: $color-additional;
+      color: #fff;
+    }
   }
 
   &:active {
     background-color: $color-main;
     border-color: $color-main;
+    color: #fff;
   }
 
   @include media-mobile {

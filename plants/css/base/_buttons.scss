@@ -10,19 +10,34 @@
   cursor: pointer;
   @extend %transition;
 
-  &:hover {
-    background-color: $color-additional;
-    color: #fff;
+  @media (min-width: 769px) {
+    &:hover {
+      background-color: $color-additional;
+      color: #fff;
+    }
   }
 
   &:active {
     background-color: $color-main;
     border-color: $color-main;
+    color: #fff;
   }
 
   @include media-mobile {
     width: 121px;
     height: 35px;
     @include font(1.5rem, 2rem);
+  }
+
+  &_active {
+    background-color: $color-additional;
+    color: #fff;
+  }
+
+  &_disabled {
+    background-color: #626060;
+    border-color: #626060;
+    pointer-events: none;
+    color: #fff;
   }
 }
