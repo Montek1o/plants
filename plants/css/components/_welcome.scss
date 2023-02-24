@@ -78,6 +78,7 @@
   border: 2px solid $color-additional;
   border-radius: 10px;
   background: $color-background;
+  color: #000;
   @include font(1.6rem, 2.0rem, 400);
   @extend %font-second;
   @extend %transition;
